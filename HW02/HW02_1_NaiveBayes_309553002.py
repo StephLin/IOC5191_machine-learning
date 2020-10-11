@@ -22,7 +22,7 @@ MNIST_T10K_CACHE_FILENAME = './t10k.pickle'
 
 DISCRETE_MODE = 'discrete'
 CONTINUOUS_MODE = 'continuous'
-CLASSIFIER_MODE = DISCRETE_MODE  # options: `DISCRETE_MODE`, `CONTINUOUS_MODE`
+PREPROCESSING_MODE = DISCRETE_MODE  # options: `DISCRETE_MODE`, `CONTINUOUS_MODE`
 
 BINARY_IMAGE_THRESHOLD = 128
 
@@ -185,14 +185,15 @@ def plot_binary_images(predict: np.ndarray, dataset: mnist,
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('mode',
-                        type=str,
-                        nargs='?',
-                        const=1,
-                        default=CLASSIFIER_MODE,
-                        help=('mode for image preprocessing '
-                              '(`discrete` or `continuous`). '
-                              'default as `%s`.' % CLASSIFIER_MODE))
+    parser.add_argument(
+        'mode',
+        type=str,
+        nargs='?',
+        const=1,
+        default=PREPROCESSING_MODE,
+        help=('mode for image preprocessing '
+              '(`%s` or `%s`), default as `%s`.' %
+              (DISCRETE_MODE, CONTINUOUS_MODE, PREPROCESSING_MODE)))
     parser.add_argument('--nocache',
                         dest='nocache',
                         action='store_true',
@@ -221,10 +222,10 @@ if __name__ == '__main__':
                                                 args.nocache)
 
     # handling continuous and discrete mode
-    if args.mode == 'continuous':
+    if args.mode == CONTINUOUS_MODE:
         variance_tolerance = CONTINUOUS_VARIANCE_TOLERANCE
         binary_image_threshold = BINARY_IMAGE_THRESHOLD
-    elif args.mode == 'discrete':
+    elif args.mode == DISCRETE_MODE:
         train.images[:] = train.images // 8
         t10k.images[:] = t10k.images // 8
         variance_tolerance = DISCRETE_VARIANCE_TOLERANCE
