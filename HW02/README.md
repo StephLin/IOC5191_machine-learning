@@ -126,4 +126,39 @@ Imagination of numbers in Bayesian classifier:
 Error rate: 0.15840
 ```
 
-###
+### 2. Online Learning
+
+```txt
+$ python3 HW02_2_OnlineLearning_309553002.py --help
+usage: HW02_2_OnlineLearning_309553002.py [-h] filename alpha beta
+
+positional arguments:
+  filename    filename of test cases
+  alpha       alpha parameter for beta distribution (integer only)
+  beta        beta parameter for beta distribution (integer only)
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+
+For example,
+
+```txt
+$ python3 HW02_2_OnlineLearning_309553002.py input.txt 0 0
+case 1: 0101010101001011010101
+Likelihood: 0.16819
+Beta prior:      a =  0 b =  0
+Beta posteriori: a = 11 b = 11
+
+case 2: 0110101
+Likelihood: 0.29376
+Beta prior:      a = 11 b = 11
+Beta posteriori: a = 15 b = 14
+
+...
+
+case 11: 01101010111
+Likelihood: 0.24385
+Beta prior:      a = 78 b = 53
+Beta posteriori: a = 85 b = 57
+```
