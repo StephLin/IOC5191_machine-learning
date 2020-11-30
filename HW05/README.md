@@ -18,7 +18,7 @@ Python 3.6^ involving following packages:
 ### 1. Gaussian Process
 
 ```txt
-python3 HW05_1_GaussianProcess.py
+$ python3 HW05_1_GaussianProcess.py
 ```
 
 | Initial guess                   | Optimized result            |
