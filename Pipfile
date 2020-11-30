@@ -11,6 +11,7 @@ numpy = "*"
 matplotlib = "*"
 tqdm = "*"
 scipy = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3.6"
