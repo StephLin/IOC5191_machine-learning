@@ -46,8 +46,8 @@ def linear_plus_rbf_kernel(x1, x2, feature_distance, gamma):
     linear = x1 @ x2.T
     # https://www.csie.ntu.edu.tw/~cjlin/libsvm/
     rbf = np.exp(-gamma * feature_distance)
-    param = np.hstack(
-        (np.arange(x1.shape[0])[:, np.newaxis] + 1, linear + rbf))
+    indices = np.arange(x1.shape[0])[:, np.newaxis] + 1
+    param = np.hstack((indices, linear + rbf))
     return param
 
 
