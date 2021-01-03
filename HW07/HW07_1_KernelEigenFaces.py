@@ -2,17 +2,17 @@
 # IOC5191 Machine Learning Homework 07-1: Kernel Eigenfaces
 # Student ID: 309553002
 # ---------------------------------------------------------------------------- #
-import sys
-import logging
 import argparse
-from collections import namedtuple
-import os.path as osp
 import glob
-from PIL import Image
+import logging
+import os.path as osp
+import sys
+from collections import namedtuple
 
-import numpy as np
-from scipy.spatial.distance import cdist
 import matplotlib.pyplot as plt
+import numpy as np
+from PIL import Image
+from scipy.spatial.distance import cdist
 
 logging.basicConfig()
 logger = logging.getLogger('KernelEigenFaces')
@@ -156,7 +156,8 @@ class LDA(object):
             data = self.data[indices]
             mu = np.mean(data, axis=0)
             self.sw += (data - mu).T @ (data - mu)
-            self.sb += len(indices) * (mu - self.mean).T @ (mu - self.mean)
+            diff = np.array([mu - self.mean]).T
+            self.sb += len(indices) * diff @ diff.T
         eigvals, eigvecs = np.linalg.eig(np.linalg.pinv(self.sw) @ self.sb)
 
         # normalize eigenvectors
