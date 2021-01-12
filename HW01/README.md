@@ -15,8 +15,8 @@ Note that f-string is used so version <= 3.5 is not allowed.
 ## Usage
 
 ```txt
-$ python3 HW01_309553002.py --help
-usage: HW01_309553002.py [-h] filename n regularizer
+$ python3 HW01.py --help
+usage: HW01.py [-h] filename n regularizer
 
 positional arguments:
   filename     file which consists of data points
@@ -30,7 +30,7 @@ optional arguments:
 For example,
 
 ```txt
-$ python3 HW01_309553002.py input.txt 3 0
+$ python3 HW01.py input.txt 3 0
 LSE:
 Fitting line: 3.02385X^2 + 4.90619X^1 + -0.23140
 Total error: 26.55996

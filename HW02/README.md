@@ -14,8 +14,8 @@ Python 3.6^ involving following packages:
 ### 1. Naive Bayes Classifier
 
 ```txt
-$ python3 HW02_1_NaiveBayes_309553002.py --help
-usage: HW02_1_NaiveBayes_309553002.py [-h] [--nocache] [--debug] [mode]
+$ python3 HW02_1_NaiveBayes.py --help
+usage: HW02_1_NaiveBayes.py [-h] [--nocache] [--debug] [mode]
 
 positional arguments:
   mode        mode for image preprocessing (`discrete` or `continuous`).
@@ -30,7 +30,7 @@ optional arguments:
 For example,
 
 ```txt
-$ python3 HW02_1_NaiveBayes_309553002.py discrete
+$ python3 HW02_1_NaiveBayes.py discrete
 Posteriori (in log scale):
 0: 0.10272
 1: 0.10752
@@ -129,8 +129,8 @@ Error rate: 0.15840
 ### 2. Online Learning
 
 ```txt
-$ python3 HW02_2_OnlineLearning_309553002.py --help
-usage: HW02_2_OnlineLearning_309553002.py [-h] filename alpha beta
+$ python3 HW02_2_OnlineLearning.py --help
+usage: HW02_2_OnlineLearning.py [-h] filename alpha beta
 
 positional arguments:
   filename    filename of test cases
@@ -144,7 +144,7 @@ optional arguments:
 For example,
 
 ```txt
-$ python3 HW02_2_OnlineLearning_309553002.py input.txt 0 0
+$ python3 HW02_2_OnlineLearning.py input.txt 0 0
 case 1: 0101010101001011010101
 Likelihood: 0.16819
 Beta prior:      a =  0 b =  0
