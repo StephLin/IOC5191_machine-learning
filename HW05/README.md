@@ -1,7 +1,7 @@
 # Homework 5
 
-- Student ID: 309553002
-- Name: 林育愷
+- Spec: [ML_HW05-1_Spec.pdf](./ML_HW05-1_Spec.pdf), [ML_HW05-2_Spec.pdf](./ML_HW05-2_Spec.pdf)
+- Written Report: [ML_HW5-1_report.pdf](./ML_HW5-1_report.pdf), [ML_HW5-2_report.pdf](./ML_HW5-2_report.pdf)
 
 ## Prerequisites
 

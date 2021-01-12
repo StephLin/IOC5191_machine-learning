@@ -1,7 +1,6 @@
 # Homework 1
 
-- Student ID: 309553002
-- Name: 林育愷
+- Spec: [109ML_HW01.pdf](./1091ML_HW01.pdf)
 
 ## Prerequisites
 
